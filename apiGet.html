@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .error {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Get Data using Api</h1>
+
+    <select onchange="loadRecord(this,this.value);">
+      <option value="10">10 Record</option>
+      <option value="100">100 Record</option>
+      <option value="200">200 Record</option>
+      <option value="300">300 Record</option>
+      <option value="all">All</option>
+    </select>
+
+    <table border="1" rules="all">
+      <caption>
+        User Data
+      </caption>
+      <thead>
+        <tr>
+          <th>SR.</th>
+          <th>ID.</th>
+          <th>Name.</th>
+          <th>Email.</th>
+          <th>Mobile.</th>
+        </tr>
+      </thead>
+      <tbody id="user_data"></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="5">
+            <button onclick="prev(-1)"><< Pre</button>
+            <button onclick="next(+1)">Next >></button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+  <script>
+    function getRecordfromApi(start = 0, end = 0, totalRecord = 10) {
+      let api = fetch("https://ott.seeksolution.in/api/user");
+      api
+        .then(function (response) {
+          if (response.ok) {
+            return response.json();
+          }
+        })
+        .then(function (result) {
+          let tr = ``;
+          //console.log('data',result);
+          if (result.code == 201 && result.status == true) {
+            //window.alert(result.message);
+            if (Array.isArray(result.data)) {
+              let size = totalRecord;
+              if (totalRecord && totalRecord == "all") {
+                size = result.data.length;
+              }
+              console.log(totalRecord, size);
+
+              for (let i = 0; i < size; i++) {
+                let user = result.data[i];
+                tr =
+                  tr +
+                  `<tr>
+    			<td>${Number(i) + Number(1)}</td>
+    			<td>${user.id}</td>
+    			<td>${user.name}</td>
+    			<td>${user.email}</td>
+    			<td>${user.mobile}</td>
+    			</tr>
+    			`;
+              } //for closing
+              //console.log(tr);
+
+              document.getElementById("user_data").innerHTML = tr;
+            }
+          }
+        })
+        .catch(function (error) {
+          console.log("Error Occured", error);
+        });
+    }
+
+    function loadRecord(element, value) {
+      getRecordfromApi(value);
+    }
+
+    getRecordfromApi(10);
+
+    function next(page) {
+      var copy = page;
+      var start = 0;
+      var end = 10;
+      var total = start + end;
+      while (page) {
+        start = end + 1;
+        end = end + 10;
+      }
+      console.log("start->", start);
+      console.log("end->", end);
+      console.log("total->", total);
+
+      getRecordfromApi(start, end, total);
+    }
+    function prev(page) {}
+  </script>
+</html>

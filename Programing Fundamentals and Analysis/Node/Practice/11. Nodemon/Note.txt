@@ -1,0 +1,106 @@
+What is Hot Reloading :-
+------------------------------
+Hot reloading : as soon as we change any single line in the source code we need to restart the server.
+SO HOT reloading is concept, which enables to restart the servers automatically as soon as code is changes.
+
+
+
+
+This concecpt is Observed in : 
+-----------------------------------
+1. WEB    :- Nestjs, Nextjs, Reactjs, Angularjs
+2. Mobile :- React-native, Flutter
+
+
+
+How to enabl the hot reloading :
+---------------------------------
+We use nodemon : local development live server
+steps : 
+        create package.json
+        npm init -y
+        package.json
+
+set dependency :
+        dependency:{
+            "nodemon":"latest"
+        }
+
+    npm i
+
+Special folder will be generated : node_modules/nodemon
+
+
+How to verify that pakcage is installed :-
+npm ls <pkg_name>
+
+
+
+
+
+
+
+How to set environment for nodemon to behave as real server 
+--------------------------------------------------------------
+Command for running nodemon
+Same se node server.js we can use nodemon.js
+Here Problem is, nodemon is not recognized at internal and externam cmd.
+
+
+
+1. Install nodemon Globally
+            npm intsall -g nodemon
+            or
+            npm install -global nodemon
+
+
+node_modules/nodemon/bin
+1. nodemon.js
+2. nodemon.cmd :  .bin me hoga at root of the folder
+
+In order to run nodemon we need to excute server.js inside .bin directory
+"cd node_modules/.bin && npx nodemon "../../server.js"
+or
+"dev" : "cd node_modules/.bin && npx nodemon "../../server.js"
+ to restart ther server us "rs"
+
+
+
+ Note : if you don't get nodemon.cmd then we need to execute npm exec nodemon.js ./bin/nodemon.cmd will be automatically created
+
+
+
+ Custmoize nodemon :
+ ---------------------------
+
+ create nodemon.json 
+
+ {
+    "watch":["."],
+    "ignore":["node_modules"],
+    "ext":"json,html,css,js,cjs,mjs",
+    "exec":"node server.js"
+ }
+
+
+ where ,
+
+ watch : watch the current directory,
+ ignore : ignore the property of nodemon from node_modules,
+ ext : extension support via nodemon
+ exec : excute the code by default server.js
+
+
+
+
+
+
+
+
+
+ Other name of HOT RELOADING : 
+ ------------------------------
+
+ Live Reloading
+ Hot Reloading Replacement (HRM)
+ Fast Reloading

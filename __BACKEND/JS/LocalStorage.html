@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Local Storage</h1>
+    <form action="">
+
+        <fieldset>
+            <legend> Student Data</legend>
+            <p>FName* : <input type="text" id="fname"> </p>
+            <p>MName : <input type="text" id="mname"></p>
+            <p>LName : <input type="text" id="lname"> </p>
+            <p> Email* : <input type="email" name="" id="email"></p>
+            <p>Phone* : <input type="text" name="" id="phone"></p>
+            <p>Gender* :
+                <input type="radio" name="gender" class="gender" id="male">Male
+                <input type="radio" name="gender" class="gender" id="female">Female
+                <input type="radio" name="gender" class="gender" id="other">Others
+            </p>
+
+            <p>
+                Course* : <Select>
+                    <option value="course">----</option>
+                    <option value="B.tech">B.tech</option>
+                    <option value="M.tech">M.tech</option>
+                    <option value="BCA">BCA</option>
+                    <option value="MCA">MCA</option>
+                    <option value="B.tech">B.tech</option>
+                </Select>
+            </p>
+            <p>
+                Select Subject* :
+                <input type="checkbox" class="subjects" value="Human_Value"> Human Value
+                <input type="checkbox" class="subjects" value="Maths"> Maths
+                <input type="checkbox" class="subjects" value="EVS"> EVS
+            </p>
+
+            <p> Address* : <textarea maxlength="255" name="" id="" cols="50" rows="5" id="address"
+                    placeholder="Enter your address" style="resize: none;"></textarea>
+            </p>
+
+            <p> <input type="submit" name="" id="" value="Register" onclick="submitForm(event)">
+            </p>
+
+        </fieldset>
+    </form>
+
+    <script src="LocalStorage.js"></script>
+
+</body>
+
+</html>

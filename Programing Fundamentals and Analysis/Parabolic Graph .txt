@@ -1,0 +1,23 @@
+Parabolic Graph :
+---------------------
+ These graph are generated when the degree/power of the dependent to independent variable varies with a difference of n=2
+
+
+
+if, 
+    n=1 ----> Linear         [y=mx+c]
+    n=2 ----> Quadratic      [y=ax^2 + mx + c]
+    n=3 ----> Cubic
+    n=4 ----> Bi-quadratice
+
+Provide the relationship between y and x is,   ----> y=f(x)
+
+
+After PNG of Parabola....
+
+Q1. y=(x+3)(x-3)
+     y= x2 - 3^2
+     y = x^2 -9
+
+
+Graph 

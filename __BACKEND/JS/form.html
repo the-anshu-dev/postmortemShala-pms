@@ -1,0 +1,89 @@
+<!Doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1>localStorage form demo</h1>
+    <form>
+        <p>EmpName : <input type="text" id="input_name" /></p>
+        <p>EmpDept : <input type="text" id="input_dept" /></p>
+        <p>EmpSal : <input type="text" id="input_sal" /></p>
+        <input type="button" value="Register" onclick="register();" />
+    </form>
+    <script>
+        function $(selector) {
+            let nodeList = document.querySelectorAll(selector);
+            if (nodeList.length == 1) {
+                return nodeList[0];
+            } else if (nodeList.length > 1) {
+                return nodeList;
+            } else {
+                console.error('Such ID Does not exist');
+                return null;
+            }
+        }
+
+
+        // var pattern = `EMP${id}`
+        var id = 20230001;
+        function register() {
+            //input box.
+            let input_name = $('#input_name');
+            let input_dept = $('#input_dept');
+            let input_sal = $('#input_sal');
+            //values.
+            let name = input_name.value;
+            let dept = input_dept.value;
+            let sal = input_sal.value;
+
+            let EmpArray = window.localStorage.getItem('data') ? JSON.parse(window.localStorage.getItem('data')) : [];
+            let empid;
+            if (EmpArray.length == 0) {
+                empid = id;
+            } else {
+
+                //Infinite Loop
+                let AssumeMax;
+                for (let i = 0; i < EmpArray.length; i++) {
+
+                    AssumeMax = EmpArray[0].id;
+                    let maxId = EmpArray[i].id;
+                    if (maxId > AssumeMax) {
+                        AssumeMax = maxId;
+                    }
+
+                }
+                console.log(AssumeMax);
+                empid = AssumeMax + 1;
+
+
+            }
+
+            let empdata = {
+                name: name,
+                dept: dept,
+                sal: sal,
+                id: empid,
+            };
+
+            EmpArray.push(empdata);
+
+            window.localStorage.setItem('data', JSON.stringify(EmpArray));
+
+
+
+
+
+
+
+        }
+
+    </script>
+</body>
+
+
+
+</html>

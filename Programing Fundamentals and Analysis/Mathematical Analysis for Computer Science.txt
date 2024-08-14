@@ -1,0 +1,38 @@
+Function  : 
+_____________
+
+Jha pe bhi dependency ayegi waha pe function kahlayega
+
+Fun + action -> as per softpro
+
+but.....
+
+Function is basically define as...
+ eg :
+      Ram  ---wants---Food ****dependence on --Mumma---
+      But Mumma didn't  depends on Food
+
+So, 
+
+Ram = F(mumma) for food
+So here.. 
+         Ram is Dependent function
+         Mumma is independent function
+
+
+Types of Dependency :
+________________________
+1. Direct Function ---> Y is directly depend on x
+2. Indirect Function ---> Y is indirectly depend on x
+
+
+
+
+
+
+
+if, Y = mx + c
+ case 1 : if c=0---> line passes through the origin
+ case 2 : if m=0---> line darw parallel to x-axis
+ case 3 : if c>0---> line shift toward the +ve y-axis
+ case 4 : if c<0---> line shift toward the -ve y-axis

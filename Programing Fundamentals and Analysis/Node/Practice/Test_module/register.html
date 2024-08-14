@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <h1>Register :</h1>
+    <form>
+      Name : <input type="text" id="name" />
+      <br />
+      Email : <input type="email" id="email" />
+      <br />
+      Password : <input type="password" id="pass" />
+
+      <br />
+      <button type="submit" onclick="handleSubmit(event)">Register now</button>
+
+      <p id="demo"></p>
+    </form>
+
+    <script>
+      const query = require("./test_helper"); 
+
+      function handleSubmit(e) {
+        // e.preventDefault();
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const pass = document.getElementById("pass");
+
+        const name_value = name.value;
+        const email_value = email.value;
+        const pass_value = pass.value;
+
+        console.log("Name ==>", name_value);
+        console.log("Email ==>", email_value);
+        console.log("Password ==>", pass_value);
+
+        const data = query.register({
+                name:name_value,
+                email:email_value,
+                password:pass_value,
+              });
+
+              console.log("Data ==> ", data);
+
+      }
+    </script>
+  </body>
+</html>

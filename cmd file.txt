@@ -1,0 +1,99 @@
+gcc -c p1.c
+
+gcc p1.o -o p1.exe
+
+p1.exe
+
+
+
+
+
+
+
+
+
+
+
+
+sort          : to sort the element (ctrl + c : to display answer)
+ver           : show version of cmd
+xyz --version : to check version
+cls           : clear the recent text
+exit          : terminate cmd window.
+dir           : to show current directory.
+set           : /a, /p
+%x%           : value
+echo          : print
+title         : cmd name changer.
+cd            : directly to 
+cd..          : 1-step back-directory.
+cd/           : Go to directly main drive --> C:/
+start code    : open vscode
+start notepad : open notepad
+
+
+Relative path :
+_________________
+1) . or ./ or /    : Current directory  (start . 
+2) .. or ../       : parent directory
+3) cd/             : root loaction
+4) .../ is equal to ./
+
+
+Launching the window explorer :
+________________________________
+1. C:\Users\ASUS>start .   : Launch ASUS folder
+
+
+Going forward inside any folder :
+_____________________________________
+1. cd : is used to get inside of any folder.
+
+
+How to see list of files and folder inside a directory :
+______________________________________________
+1. dir : show directory of current folder.
+
+
+How to access BIOS system info.
+**********************************
+systeminfo : show all info of BIOS
+
+Color Changing : 
+*****************
+color bf : b : background(0->black), f: font(1->green)
+
+
+date and time in cmd :
+***************
+echo date : display date
+echo time : display time
+
+note : if we use 'date & time' as command if will allow you to change date of system (but not applicable for after Switch-on by Switch-Off systemm)
+
+
+ADD 2 or more than 2 cmd in once :
+**************************************
+use &&
+
+eg : cd:/ date && time && ver
+
+'date && time && ver' is act as combined command
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

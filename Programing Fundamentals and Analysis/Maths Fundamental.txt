@@ -1,0 +1,37 @@
+Case 1 :
+
+#y=|x| ,  y=mode(x)
+y=(x>0)?x:-x;   // ternary operator
+printf("%d",y);
+
+-------------------------
+
+Case 2 :
+
+#1.0
+t=1
+for(int x=5;x>1;x--){t=t*x;}  // it runs 4 times
+
+#2.0
+t=1;
+for(int x=1;x<-5;x--){t=t*x;} // it runs 5times
+
+#1.0 is better than #2.0
+
+-------------------------------------
+
+Case 3 :
+
+sqrt of 25
+int y= pow(25,0.5); 
+int y= pow(25, -2);  // sqrt of 25
+
+---------------------------------------
+
+Case 4 : Prime number :
+
+pr1me
+
+int prime = 
+
+  

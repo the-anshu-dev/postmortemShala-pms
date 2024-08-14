@@ -1,0 +1,18 @@
+1. Types of import : -
+---------------------
+if we want to import url
+const url = require('node:url') : import from node_modules
+const url = require('url') : import from node_modules
+
+
+root -
+url.js
+const url = require('./url') : import from local url
+
+The difference B/w requires ('node:url') and require('./url') is require('node:url'): this latest modetn syntax of node v20.x which means inporting, inbuilt package of node_modules.
+
+require('url') : But the meaning of this is custom
+
+=====================================================================================================================
+
+

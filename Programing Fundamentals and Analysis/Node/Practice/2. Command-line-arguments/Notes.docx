@@ -1,0 +1,50 @@
+# .................................
+
+In Any programming language : there are two types of inputs (stdin):
+
+
+1.  Runtime : {
+    Inputs or arguments supllied at run time : after execution
+    Eg: readline is the best example , 
+          const readline = require('readline)
+}
+
+2. Compiletime : {
+    Inputs or arguments supplied at Compile time : before execution
+    Eg: console.log(arg1, agrd2, ...argn)
+}
+
+
+
+----------------------------------------------------------------
+
+So argument supplied at compile time are called as : COMPILE TIME ARGUMENTS
+
+  Eg : node index.js 10 20
+        0     1       2  3
+      arg1  arg2    arg3 arg4
+
+
+    Input constant : 
+                    argument variable arg
+                    count = process.argv.length
+                    type = string
+                    Array.isArray(argvs)=true : it is an collection of Array
+                    TWO default arguments are : node file.js 
+                    node : node path
+                    file : file path
+                    spaces are act as separator
+                    Homogenioue Array
+                    if you want to give string as full name in one index the use "Anshu chaurasia" [double quote]
+                    to file argument variable length: process.argve.lenght-2
+
+    Pre-define process : 
+                    process.env    : environment path
+                    process.stdin  : Standard Inputs
+                    process.stdout : Standard Outputs
+                    process.stderr : Standard error
+                    process.argv   : command line arguments 
+                    
+---------------------------------------------------------------------------------------
+      
+
